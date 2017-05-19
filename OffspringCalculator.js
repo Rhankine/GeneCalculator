@@ -12,4 +12,5 @@ function splitGenotype(genotype) {
         allelePairs.push(alleles);
     }
     console.log(allelePairs)
+    return allelePairs;
 }
