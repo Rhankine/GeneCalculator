@@ -1,3 +1,9 @@
+function findAllelePermutations(allelePairs) {
+    for (var i = 0; i < allelePairs.length; i++) {
+        console.log(allelePairs[i].substring(0,Math.floor(allelePairs[i].length/2)));
+    }
+}
+
 function splitGenotype(genotype) {
     var allelePairs = [];
     var alleles = "";
