@@ -1,7 +1,19 @@
 function findAllelePermutations(allelePairs) {
-    for (var i = 0; i < allelePairs.length; i++) {
-        console.log(allelePairs[i].substring(0,Math.floor(allelePairs[i].length/2)));
+    counter = Math.pow(2, allelePairs.length);
+    for (var j = 0; j < counter; j++) {
+        var bin = Number(j).toString(2);
+        var allelePermutation = "";
+        for (var i = 0; i < allelePairs.length; i++) {
+            if (bin[i] == 0) {
+                allelePermutation += allelePairs[i].substring(0,Math.ceil(allelePairs[i].length/2));
+            }
+            else {
+                allelePermutation += allelePairs[i].substring(Math.ceil(allelePairs[i].length/2),allelePairs[i].length);
+            }
+        }
+        console.log(allelePermutation);
     }
+    
 }
 
 function splitGenotype(genotype) {
